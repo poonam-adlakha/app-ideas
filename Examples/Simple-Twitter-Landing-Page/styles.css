@@ -1,0 +1,200 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Container layout */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Left section */
+.left-section {
+    flex: 1;
+    background: linear-gradient(45deg, #1da1f2, #0d8bd9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo h1 {
+    font-size: 200px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Right section */
+.right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #000;
+}
+
+.content {
+    max-width: 400px;
+    width: 100%;
+}
+
+.content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+.form-container {
+    background-color: #111;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.form-container h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1da1f2;
+}
+
+input::placeholder {
+    color: #666;
+}
+
+/* Button styles */
+.btn {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #1da1f2;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #1991db;
+    transform: translateY(-2px);
+}
+
+/* Links and text */
+.switch-form {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+}
+
+.switch-form a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
+.terms {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.terms a {
+    color: #1da1f2;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section {
+        min-height: 200px;
+    }
+    
+    .logo h1 {
+        font-size: 100px;
+    }
+    
+    .content h1 {
+        font-size: 36px;
+    }
+    
+    .content h2 {
+        font-size: 20px;
+    }
+    
+    .right-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+    
+    .logo h1 {
+        font-size: 80px;
+    }
+    
+    .content h1 {
+        font-size: 28px;
+    }
+}
